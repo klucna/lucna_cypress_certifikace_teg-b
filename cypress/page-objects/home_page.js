@@ -36,27 +36,27 @@ export class HomePage extends HeaderSection {
   }
 
   firstNameHaveText(firstname) {
-    this.firstName.get().should("contain.text", firstname);
+    this.firstName.containsText(firstname);
     return this;
   }
 
   lastNameHaveText(lastname) {
-    this.lastName.get().should("contain.text", lastname);
+    this.lastName.containsText(lastname);
     return this;
   }
 
   emailHaveText(email) {
-    this.email.get().should("contain.text", email);
+    this.email.containsText(email);
     return this;
   }
 
   phoneNumberHaveNumber(phonenumber) {
-    this.phoneNumber.get().should("contain.text", phonenumber);
+    this.phoneNumber.containsText(phonenumber);
     return this;
   }
 
   ageHaveNumber(age) {
-    this.age.get().should("contain.text", age);
+    this.age.containsText(age);
     return this;
   }
 }

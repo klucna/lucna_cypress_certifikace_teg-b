@@ -1,14 +1,12 @@
 export class AccountApi {
-  login(username, password) {
+  createAccount(account) {
     return cy.request({
       method: "POST",
-      url: cypressConfig.env("tegb_url") + "/auth/login",
+      url: Cypress.env("tegb_be_url") + "tegb/accounts/create",
       body: {
-        username: username,
-        password: password,
+        startBalance: 10000,
+        type: "Test",
       },
     });
   }
 }
-
-createAccount(account);
