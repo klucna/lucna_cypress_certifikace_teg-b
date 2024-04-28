@@ -14,9 +14,4 @@ export class HeaderSection extends MenuSection {
     this.logoutButton.get().click();
     return new LoginPage();
   }
-
-  titleHaveText(titleText) {
-    this.pageTitle.hasText(titleText);
-    return this;
-  }
 }
