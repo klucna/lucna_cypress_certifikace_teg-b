@@ -1,6 +1,6 @@
 export class BasePage {
   constructor(path) {
-    this.baseUrl = "https://tegb-frontend-88542200c6db.herokuapp.com/";
+    this.baseUrl = Cypress.env("tegb_url");
     this.path = path;
   }
 

@@ -2,7 +2,7 @@ import { HomePage } from "../../page-objects/home_page";
 import { LoginPage } from "../../page-objects/login_page";
 import { faker } from "@faker-js/faker";
 
-describe("Register and Login new User E2E test", () => {
+describe("Register and Login new User E2E test Tegb", () => {
   beforeEach(() => {
     new LoginPage().openTegb();
   });

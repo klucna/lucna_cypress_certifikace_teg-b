@@ -3,13 +3,14 @@ import { RegisterPage } from "./register_page";
 
 export class LoginPage {
   constructor() {
-    this.tegbUrl = "https://tegb-frontend-88542200c6db.herokuapp.com/";
+    this.tegbUrl = Cypress.env("tegb_url");
     this.usernameInput = "input[data-testid='username-input']";
     this.passwordInput = "input[data-testid='password-input']";
     this.loginButton = "button[data-testid='submit-button']";
     this.lostPasswordButton = "button[data-testid='registration-link']";
     this.registerButton = "button[data-testid='register-button']";
     this.loginPageLogo = ".title";
+    cy.intercept("/tegb/login").as("login_api");
   }
 
   openTegb() {

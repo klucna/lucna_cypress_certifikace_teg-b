@@ -16,7 +16,7 @@ export class HeaderSection extends MenuSection {
   }
 
   titleHaveText(titleText) {
-    this.pageTitle.get().should("have.text", titleText);
+    this.pageTitle.hasText(titleText);
     return this;
   }
 }
