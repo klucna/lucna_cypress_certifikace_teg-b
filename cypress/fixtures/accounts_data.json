@@ -1,17 +1,17 @@
 [
   {
-    "balance": 0
+    "startBalance": 0
   },
   {
-    "balance": 200000.52
+    "startBalance": 200000.52
   },
   {
-    "balance": -12345.0
+    "startBalance": -12345.0
   },
   {
-    "balance": -196000921
+    "startBalance": -196000921
   },
   {
-    "balance": 298000123
+    "startBalance": 298000123
   }
 ]

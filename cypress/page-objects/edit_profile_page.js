@@ -1,3 +1,4 @@
+import { customElement } from "../helpers/custom_elements";
 import { HomePage } from "./home_page";
 
 export class EditProfilePage {
@@ -8,6 +9,9 @@ export class EditProfilePage {
     this.phoneNumber = "input[data-testid='chage-phone-input']";
     this.age = "input[data-testid='chage-age-input']";
     this.saveButton = "button[data-testid='save-changes-button']";
+    this.editButton = customElement(
+      "button[data-testid='toggle-edit-profile-button']"
+    );
   }
 
   typeFirstName(firstname) {

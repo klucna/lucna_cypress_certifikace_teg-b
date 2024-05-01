@@ -19,14 +19,23 @@ export class HomePage extends HeaderSection {
     this.addAccountButton = customElement("button[class='account-action']");
     this.accountsHeader = customElement("h2[data-testid='accounts-title']");
     this.addAccountButton = customElement("button[class='account-action']");
-    this.accountNumber = customElement(
+    this.accountNumberHeading = customElement(
       "table[class='accounts-table'] tr[class='account-heading'] th[data-testid='account-number-heading']"
     );
-    this.accountBalance = customElement(
+    this.accountBalanceHeading = customElement(
       "table[class='accounts-table'] tr[class='account-heading'] th[data-testid='account-balance-heading']"
     );
-    this.accountType = customElement(
+    this.accountTypeHeading = customElement(
       "table[class='accounts-table'] tr[class='account-heading'] th[data-testid='account-type-heading']"
+    );
+    this.accountRow = customElement(
+      "table[class='accounts-table'] tr[class='account-row']"
+    );
+    this.accountBalance = customElement(
+      "table[class='accounts-table'] tr[class='account-row'] td[data-testid='account-balance']"
+    );
+    this.accountType = customElement(
+      "table[class='accounts-table'] tr[class='account-row'] td[data-testid='account-type']"
     );
   }
 
@@ -35,28 +44,43 @@ export class HomePage extends HeaderSection {
     return new EditProfilePage();
   }
 
-  firstNameHaveText(firstname) {
+  firstNameContainText(firstname) {
     this.firstName.containsText(firstname);
     return this;
   }
 
-  lastNameHaveText(lastname) {
+  lastNameContainText(lastname) {
     this.lastName.containsText(lastname);
     return this;
   }
 
-  emailHaveText(email) {
+  emailContainText(email) {
     this.email.containsText(email);
     return this;
   }
 
-  phoneNumberHaveNumber(phonenumber) {
+  phoneNumberContainNumber(phonenumber) {
     this.phoneNumber.containsText(phonenumber);
     return this;
   }
 
-  ageHaveNumber(age) {
+  ageContainNumber(age) {
     this.age.containsText(age);
+    return this;
+  }
+
+  accountRowIsVisible() {
+    this.accountRow.isVisible();
+    return this;
+  }
+
+  accountBalanceContainsText(startBalance) {
+    this.accountBalance.containsText(startBalance);
+    return this;
+  }
+
+  accountTypeContainsText(type) {
+    this.accountType.containsText(type);
     return this;
   }
 }

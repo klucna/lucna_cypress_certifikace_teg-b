@@ -1,3 +1,4 @@
+import { customElement } from "../helpers/custom_elements";
 import { HomePage } from "./home_page";
 import { RegisterPage } from "./register_page";
 
@@ -9,7 +10,7 @@ export class LoginPage {
     this.loginButton = "button[data-testid='submit-button']";
     this.lostPasswordButton = "button[data-testid='registration-link']";
     this.registerButton = "button[data-testid='register-button']";
-    this.loginPageLogo = ".title";
+    this.loginPageLogo = customElement(".title");
     cy.intercept("/tegb/login").as("login_api");
   }
 

@@ -123,24 +123,34 @@ describe("Dashboasrd atomic tests", { testIsolation: false }, () => {
     });
 
     it("Account number has attribute", () => {
-      new HomePage().accountNumber.hasAttribute(
+      new HomePage().accountNumberHeading.hasAttribute(
         "data-testid",
         "account-number-heading"
       );
     });
 
     it("Balance has attribute", () => {
-      new HomePage().accountBalance.hasAttribute(
+      new HomePage().accountBalanceHeading.hasAttribute(
         "data-testid",
         "account-balance-heading"
       );
     });
 
     it("Account type has attribute", () => {
-      new HomePage().accountType.hasAttribute(
+      new HomePage().accountTypeHeading.hasAttribute(
         "data-testid",
         "account-type-heading"
       );
+    });
+  });
+  context("Dashboard Buttons functionality tests", () => {
+    it("Edit profile button test", () => {
+      new HomePage()
+        .clickEditProfileButton()
+        .editButton.hasText("Zrušit úpravy");
+    });
+    it("Logout button functionality test", () => {
+      new HomePage().clicklogout().loginPageLogo.isVisible();
     });
   });
 });
